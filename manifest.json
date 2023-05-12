@@ -2,7 +2,7 @@
     "manifest_version": 3,
     "name": "Bionic Reading",
     "version": "1.0",
-    "permissions": ["scripting"],
+    "permissions": ["activeTab", "scripting", "tabs"],
     "background": {
         "service_worker": "background.js"
     },
