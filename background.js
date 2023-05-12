@@ -1,7 +1,8 @@
 //This script listens for when the user clicks the extension's icon in the Chrome toolbar. 
 
-chrome.browserAction.onClicked.addListener(function(tab) {
-    chrome.tabs.executeScript(tab.id, {
-        file: 'content.js'
+chrome.action.onClicked.addListener((tab) => {
+    chrome.scripting.executeScript({
+        target: { tabId: tab.id },
+        files: ['content.js']
     });
 });
